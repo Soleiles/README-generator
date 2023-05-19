@@ -102,16 +102,15 @@ function generateMarkdown(data, licenseLabel, licenseBadge, licenseLink) {
   ## Table of Contents\n
   - [Installation](#installation)\n
   - [Usage](#usage)\n
-  - [Contributing](#contributing)\n
-  - [Tests](#tests)\n
-  - [Credits](#credits)\n
+  - [Contributors](#contributors)\n
+  - [Testing](#testing)\n
   - [License](#license)\n
   - [Questions](#questions)\n\n
   ## Installation\n
   ${data.installation}\n\n
   ## Usage\n
   ${data.usage}\n
-  ## Contributing\n
+  ## Contributors\n
   ${data.contributors}\n\n
   ## Testing\n
   ${data.testing}\n\n
