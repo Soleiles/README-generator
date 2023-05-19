@@ -117,9 +117,9 @@ function generateMarkdown(data, licenseLabel, licenseBadge, licenseLink) {
   ## License\n
   [${data.license}](${licenseLink})\n\n
   ## Questions?\n
-  For any questions, please contact me via my Github or email.:\n
-  - [Email me here](mailto:${data.email})\n
-  - [Click here for my Github](https://github.com/${data.username}/)
+  For any questions, please contact me via my Github or email:\n  
+  - [Github](https://github.com/${data.username}/)
+  - [Email](mailto:${data.email})\n
 `;
 }
 
