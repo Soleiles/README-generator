@@ -1,7 +1,6 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// ****** LICENSE BADGES ****** //
 function renderLicenseBadge(license) {
-  const licenseList = [
+const licenseList = [
     {
       name: 'None',
       label: '',
@@ -86,31 +85,46 @@ function renderLicenseBadge(license) {
       badge: 'https://img.shields.io/badge/license-Unlicense-blue.svg',
       link: 'http://unlicense.org/',
     },
-  ]
-}
-
-// TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-  title = [
-  `## Description \n - ${data.projectDescription}\n\n`,
-  `## Table of Contents \n\n`,
-  ` - [Installation](#installation)\n`,
-  ` - [Usage](#usage)\n`,
-  ` - [Contribution Guidelines](#contribution-guidelines)\n`,
-  ` - [Testing](#testing)\n`,
-  ` - [License](#license)\n`,
-  ` - [Questions](#questions)\n\n`,
-  `## Installation \n - ${data.projectInstallation}\n\n`,
-  `## Usage \n - ${data.project_usage}\n\n`,
-  `## Contribution Guidelines \n - ${data.projectContribution}\n\n`,
-  `## Testing \n - ${data.projectTesting}\n\n`,
-  `## License \n - [${data.projectLicense}](${licenseLink})\n\n`,
-  `## Questions? \n\n`,
-  `### For further information about this project, see below: \n`,
-  ` - [Visit my Github](https://github.com/${data.projectUsername})\n\n`,
-  ` - [Email me here](mailto:${data.projectEmail})\n`,
   ];
-  return `# ${data.title}`;
+  for(list of licenseList){
+    if(license === list.name){
+      return list;
+    }
+  }
 }
 
-module.exports = generateMarkdown;
+// ****** Generates Markdown for README file ****** //
+function generateMarkdown(data, licenseLabel, licenseBadge, licenseLink) {
+  return `# ${data.title}\n
+  [![${licenseLabel}](${licenseBadge})](${licenseLink})
+  ## Description\n
+  ${data.description}\n\n
+  ## Table of Contents\n
+  - [Installation](#installation)\n
+  - [Usage](#usage)\n
+  - [Contributing](#contributing)\n
+  - [Tests](#tests)\n
+  - [Credits](#credits)\n
+  - [License](#license)\n
+  - [Questions](#questions)\n\n
+  ## Installation\n
+  ${data.installation}\n\n
+  ## Usage\n
+  ${data.usage}\n
+  ## Contributing\n
+  ${data.contributors}\n\n
+  ## Testing\n
+  ${data.testing}\n\n
+  ## License\n
+  [${data.license}](${licenseLink})\n\n
+  ## Questions?\n
+  For any questions, please contact me via my Github or email.:\n
+  - [Email me here](mailto:${data.email})\n
+  - [Click here for my Github](https://github.com/${data.username}/)
+`;
+}
+
+module.exports = {
+  generateMarkdown,
+  renderLicenseBadge,
+};
