@@ -16,6 +16,8 @@ In this project, we are introduced to Node.js and use it to create a functional 
 
 As shown in the demo, after the user types in `node index`, they are given prompts to fill out their readme files.
 
+https://github.com/Soleiles/readme-generator/assets/126806504/2ec1b5ef-64ae-450f-a010-32b677d3f5c2
+
 If this video does not work, [click here](https://drive.google.com/file/d/179pPFLGzj61-4dnremHFbrnT3SM-x6lj/view?usp=share_link)
 
 ## Contribution
